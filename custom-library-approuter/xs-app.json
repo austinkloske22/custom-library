@@ -1,0 +1,10 @@
+{
+	"welcomeFile": "/cp.portal",
+	"authenticationMethod": "none",
+	"routes": [{
+		"source": "/odata/v4/(.*)",
+		"destination": "srv_api",
+		"authenticationType": "none"
+	}]
+	
+}

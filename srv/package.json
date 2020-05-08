@@ -1,0 +1,28 @@
+{
+    "name": "custom-library-srv",
+    "description": "Generated from ../package.json, do not change!",
+    "version": "1.0.0",
+    "dependencies": {
+        "@sap/cds": "^3.34.1",
+        "express": "^4.17.1",
+        "@sap/hana-client": "^2.4.196"
+    },
+    "engines": {
+        "node": "^10 || ^12"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "postinstall": "npm dedupe && node .build.js",
+        "start": "node server.js",
+        "watch": "nodemon -w . -i node_modules/**,.git/** -e cds -x npm run build"
+    },
+    "private": true,
+    "cds": {
+        "requires": {
+            "db": {
+                "kind": "hana",
+                "model": "gen/csn.json"
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+<mvc:View
+	controllerName="web.manage-pdfs.controller.Object"
+	xmlns="sap.m"
+	xmlns:pdf="ui5lab.wl.pdf"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:semantic="sap.f.semantic"
+	xmlns:footerbar="sap.ushell.ui.footerbar">
+
+	<semantic:SemanticPage
+		id="page"
+		headerPinnable="false"
+		toggleHeaderOnTitleClick="false"
+		busy="{objectView>/busy}"
+		busyIndicatorDelay="{objectView>/delay}">
+
+		<semantic:titleHeading>
+			<Title text="{ID}" />
+		</semantic:titleHeading>
+			
+		<semantic:headerContent>
+			<FlexBox direction="Column" renderType="Div" class="sapUiSmallMargin">
+				<pdf:PdfViewer id="PdfViewer" pdfSource="{/Content}" height="600px"/>
+			</FlexBox>
+		</semantic:headerContent>
+
+
+	</semantic:SemanticPage>
+
+</mvc:View>
