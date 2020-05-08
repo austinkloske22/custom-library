@@ -26,7 +26,11 @@
 				"i18n": "i18n/defaultGroupId.properties"
 			},
 			"payload": {
-				"viz": []
+				"viz": [{
+					"id": "web.manage-pdfs-0-1588969013078",
+					"appId": "web.manage-pdfs",
+					"vizId": "pdfs-manage"
+				}]
 			}
 		}],
 		"sites": [{

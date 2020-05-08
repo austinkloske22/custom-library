@@ -22,6 +22,22 @@
 		"sourceTemplate": {
 			"id": "sap.ui.ui5-template-plugin.3worklistodatav4",
 			"version": "1.71.19"
+		},
+		"crossNavigation": {
+			"inbounds": {
+				"intent1": {
+					"signature": {
+						"parameters": {},
+						"additionalParameters": "allowed"
+					},
+					"semanticObject": "pdfs",
+					"action": "manage",
+					"title": "PDF",
+					"icon": "sap-icon://detail-view",
+					"info": "",
+					"subTitle": "viewer"
+				}
+			}
 		}
 	},
 	"sap.ui": {
@@ -42,7 +58,7 @@
 	},
 	"sap.ui5": {
 		"resourceRoots": {
-			"ui5lab.wl.pdf": "srv_api/customLibrary/ui5lab/wl/pdf"	
+			"ui5lab.wl.pdf": "srv_api/customLibrary/ui5lab/wl/pdf"
 		},
 		"rootView": {
 			"viewName": "web.manage-pdfs.view.App",
@@ -102,28 +118,19 @@
 				"controlId": "app",
 				"controlAggregation": "pages",
 				"bypassed": {
-					"target": [
-						"notFound"
-					]
+					"target": ["notFound"]
 				},
 				"async": true
 			},
-			"routes": [
-				{
-					"pattern": "",
-					"name": "worklist",
-					"target": [
-						"worklist"
-					]
-				},
-				{
-					"pattern": "Pdfs{objectId}",
-					"name": "object",
-					"target": [
-						"object"
-					]
-				}
-			],
+			"routes": [{
+				"pattern": "",
+				"name": "worklist",
+				"target": ["worklist"]
+			}, {
+				"pattern": "Pdfs{objectId}",
+				"name": "object",
+				"target": ["object"]
+			}],
 			"targets": {
 				"worklist": {
 					"viewName": "Worklist",
@@ -146,6 +153,7 @@
 					"viewId": "notFound"
 				}
 			}
-		}
+		},
+		"flexEnabled": true
 	}
 }
