@@ -70,7 +70,9 @@
 			"minUI5Version": "1.66.0",
 			"libs": {
 				"sap.ui.core": {},
-				"ui5lab.wl.pdf": {},
+				"ui5lab.wl.pdf": {
+					"lazy": true
+				},
 				"sap.m": {},
 				"sap.f": {},
 				"sap.ushell": {},
